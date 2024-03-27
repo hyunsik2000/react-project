@@ -8,6 +8,7 @@ function App() {
   let [newjeans] = useState(data)
 
   return (
+    <>
     <div className="App">
       <Navbar bg="dark" data-bs-theme="dark" className='custom-navbar'>
         <Container>
@@ -23,13 +24,15 @@ function App() {
       <div style = {{height: 1}}/>
       <div className="main-bg"></div>
       <UncontrolledExample/>
-    </div>
+      </div>
+      </>
   );
 }
 
 function UncontrolledExample() {
   return (
-    <Carousel>
+    <div> 
+    <Carousel className='carousel-container'>
       <Carousel.Item>
         <Image src='/1번 앨범.jpg' className='carousel-image'/>
       </Carousel.Item>
@@ -40,6 +43,7 @@ function UncontrolledExample() {
         <Image src='/3번앨범.jpg' className='carousel-image'/>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 
